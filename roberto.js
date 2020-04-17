@@ -10,7 +10,7 @@ class Engine {
         this.currentFrame = 0;
     }
 
-    calcFrame(pins){
+    calcFrameInsertion(pins){
         if(this.rolls[this.currentFrame].subrolls.length < 2 && this.rolls[this.currentFrame].subrolls.reduce((a,b) => a+b,0) < 10) {
             this.rolls[this.currentFrame].subrolls.push(pins)
         } else {
@@ -20,7 +20,7 @@ class Engine {
     }
 
     roll(pins){
-        this.calcFrame(pins)
+        this.calcFrameInsertion(pins)
         this.recalc();
     }
 
@@ -30,11 +30,13 @@ class Engine {
 
     recalc(){
         this.rolls.forEach( (roll, index) => {
+
             const sum = roll.subrolls.reduce( (a,b) => a+b, 0);
 
             if(sum < 10){
                 roll.result = sum;
-            }else{
+            } else {
+
                 if(roll.subrolls.length == 2 ){
                     roll.result = sum + this.rolls[index+1].subrolls[0]
                 }
