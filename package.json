@@ -1,0 +1,22 @@
+{
+  "name": "gs_bowling_kata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "roberto.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielherrerohernando/gs_bowling_kata.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/danielherrerohernando/gs_bowling_kata/issues"
+  },
+  "homepage": "https://github.com/danielherrerohernando/gs_bowling_kata#readme",
+  "devDependencies": {
+    "jest": "^25.3.0"
+  }
+}
