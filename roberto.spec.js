@@ -92,4 +92,10 @@ describe('Test', () => {
     // console.log(engine.rolls)
     expect(engine.getScore()).toBe(157)
   });
+  it('calculate perfect match like Homer Simpson', () => {
+    const engine = new Engine()
+    new Array(12).fill('').forEach(a=>engine.roll(10))
+    // console.log(engine.rolls)
+    expect(engine.getScore()).toBe(300)
+  });
 });
