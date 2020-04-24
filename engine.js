@@ -4,7 +4,7 @@ const createRoll = () => ({
  });
 
 const createGame = () => {
-    let rolls = new Array(12).fill('').map( a => createRoll());
+    const rolls = new Array(12).fill('').map( a => createRoll());
     let currentFrame = 0;
 
     const roll = pins => {
